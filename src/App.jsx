@@ -1,10 +1,15 @@
+import CountryDetailPage from "./pages/CountryDetailPage";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 
 const App = () => {
-  // TODO: replace this with a real route table using react-router.
-  // For now the app only shows HomePage. Clicking nav links causes a full
-  // page reload (or a 404) because there's no client-side routing yet.
+
+  <Route path="countries">
+  <Route index element={<CountriesPage />} />
+  <Route path=":countryCode" element={<CountryDetailPage />} />
+
+</Route>
+
   return (
     <Layout>
       <HomePage />
